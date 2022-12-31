@@ -1,6 +1,19 @@
-package com.wx.springframework.context;/**
+package com.wx.springframework.context;
+
+/**
+ * bean定义
  * @author 22343
- * @date 2022/12/31 20:40
  * @version 1.0
- */public class BeanDefinition {
+ */
+public class BeanDefinition {
+	
+	private Object bean;
+	
+	public BeanDefinition(Object bean) {
+		this.bean = bean;
+	}
+	public Object getBean() {
+		return bean;
+	}
+	
 }
