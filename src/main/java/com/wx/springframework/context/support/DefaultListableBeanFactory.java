@@ -28,4 +28,8 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 		return beanDefinition;
 	}
 	
+	@Override
+	public Object getBean (String beanName,Object... args) throws BeansException {
+		return null;
+	}
 }

@@ -23,7 +23,6 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
 		if (bean != null) {
 			return bean;
 		}
-		
 		BeanDefinition beanDefinition = getBeanDefinition(name);
 		return createBean(name,beanDefinition);
 	}
@@ -42,6 +41,6 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
 	 * @return 返回根据beanDefinition创建的对象
 	 * @throws BeansException beanDefinition构建异常
 	 */
-	protected abstract Object createBean (String beanName,BeanDefinition beanDefinition) throws BeansException;
+	protected abstract Object createBean (String beanName,BeanDefinition beanDefinition,Object ... args) throws BeansException;
 	
 }
